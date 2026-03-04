@@ -1,0 +1,132 @@
+[{
+  "_id": {
+    "$oid": "69a59362dc22d1bed994ff67"
+  },
+  "titulo": "Pulp Fiction",
+  "director": "Quentin Tarantino",
+  "año": 1994,
+  "genero": "Crimen",
+  "calificacion": 8.9,
+  "actores": [
+    "John Travolta",
+    "Uma Thurman",
+    "Samuel L. Jackson",
+    "Bruce Willis"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69a59362dc22d1bed994ff68"
+  },
+  "titulo": "El Señor de los Anillos: La Comunidad del Anillo",
+  "director": "Peter Jackson",
+  "año": 2001,
+  "genero": "Fantasía",
+  "calificacion": 8.8,
+  "actores": [
+    "Elijah Wood",
+    "Ian McKellen",
+    "Viggo Mortensen"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69a59362dc22d1bed994ff69"
+  },
+  "titulo": "Interestelar",
+  "director": "Christopher Nolan",
+  "año": 2014,
+  "genero": "Ciencia Ficción",
+  "calificacion": 8.6,
+  "actores": [
+    "Matthew McConaughey",
+    "Anne Hathaway",
+    "Jessica Chastain"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69a59362dc22d1bed994ff6a"
+  },
+  "titulo": "Parásitos",
+  "director": "Bong Joon-ho",
+  "año": 2019,
+  "genero": "Drama",
+  "calificacion": 8.7,
+  "actores": [
+    "Song Kang-ho",
+    "Lee Sun-kyun",
+    "Cho Yeo-jeong"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69a593b5dc22d1bed994ff6c"
+  },
+  "titulo": "Dune: Parte Dos",
+  "director": "Denis Villeneuve",
+  "año": 2024,
+  "genero": "Ciencia Ficción",
+  "calificacion": 8.7,
+  "actores": [
+    "Timothée Chalamet",
+    "Zendaya",
+    "Rebecca Ferguson"
+  ],
+  "comentarios": [
+    {
+      "usuario": "cinefila123",
+      "puntuacion": 9,
+      "comentario": "Visualmente impresionante, una obra maestra."
+    },
+    {
+      "usuario": "fan_del_libro",
+      "puntuacion": 8,
+      "comentario": "Buena adaptación, aunque se salta algunos detalles."
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "69a854cf6e9f559495d12ef1"
+  },
+  "titulo": "Rapido y Fogoso",
+  "director": "No sabo profe",
+  "año": 2016,
+  "genero": "Accion",
+  "calificacion": 7.9,
+  "actores": [
+    "Bin Diesel",
+    "Paulo LOndra",
+    "Michelle Rofrigues"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69a8555f6e9f559495d12ef3"
+  },
+  "titulo": "Sonic5",
+  "director": "SOnicsito rapidito",
+  "año": 2020,
+  "genero": "Ciencia Ficción",
+  "calificacion": 8.6,
+  "actores": [
+    "Jim Carrey",
+    "James mARSDEN",
+    "Pedrito"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69a856db6e9f559495d12ef5"
+  },
+  "titulo": "Espaider Mab",
+  "director": "Tom Cruz",
+  "año": 3056,
+  "genero": "Miedo",
+  "calificacion": 9.7,
+  "actores": [
+    "Tomas el gato",
+    "Jesus Cabralito"
+  ]
+}]
