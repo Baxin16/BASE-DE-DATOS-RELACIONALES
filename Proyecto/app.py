@@ -5,7 +5,6 @@ import bcrypt
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '20_cosas_que_no_sabias_de_las_empanadas'
 
-# Conexión a Mongo
 gestor = GestorTareas()
 
 
@@ -19,31 +18,26 @@ def iniciosesion():
     return render_template("iniciosesion.html")
 
 
-# 🔵 LOGIN
 @app.route('/validaSesion', methods=['POST'])
 def validasesion():
 
     email = request.form.get('email', '').strip()
     password = request.form.get('password', '').strip()
 
-    # Validación de campos
     if not email or not password:
         flash('Todos los campos son obligatorios', 'error')
         return render_template('iniciosesion.html')
 
-    # Buscar usuario en Mongo
     usuario = gestor.usuarios.find_one({"email": email})
 
     if not usuario:
         flash('Usuario no registrado', 'error')
         return render_template('iniciosesion.html')
 
-    # Verificar contraseña con bcrypt
     if not bcrypt.checkpw(password.encode('utf-8'), usuario['password']):
         flash('Contraseña incorrecta', 'error')
         return render_template('iniciosesion.html')
 
-    # Si todo está bien → login correcto
     session['usuario'] = usuario['nombre']
     session['usuario_email'] = usuario['email']
     session['logueado'] = True
@@ -61,7 +55,6 @@ def crearcuenta():
     return render_template("crearcuenta.html")
 
 
-# 🟢 REGISTRO
 @app.route('/registrame', methods=['POST'])
 def registrame():
 
@@ -70,26 +63,21 @@ def registrame():
     email = request.form.get("email", "").strip()
     password = request.form.get("password", "").strip()
 
-    # Validación de campos
     if not nombre or not apellido or not email or not password:
         flash("Todos los campos son obligatorios", "error")
         return render_template("crearcuenta.html")
 
-    # Validación básica de contraseña
     if len(password) < 8:
         flash("La contraseña debe tener al menos 8 caracteres", "error")
         return render_template("crearcuenta.html")
 
-    # Verificar si ya existe
     if gestor.usuarios.find_one({"email": email}):
         flash("Este correo ya está registrado", "error")
         return render_template("crearcuenta.html")
 
-    # 🔐 Encriptar contraseña (hashing)
     password_bytes = password.encode('utf-8')
     hashed = bcrypt.hashpw(password_bytes, bcrypt.gensalt())
 
-    # Guardar en Mongo
     gestor.usuarios.insert_one({
         "nombre": f"{nombre} {apellido}",
         "email": email,
